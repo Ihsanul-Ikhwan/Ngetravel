@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="125dp"
+            android:id="@+id/cardticket"
+            android:src="@drawable/card"/>
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="20dp"
+            android:id="@+id/send"
+            android:src="@drawable/send"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="350dp"
+            android:layout_alignTop="@id/cardticket"
+            android:layout_alignBottom="@id/cardticket"
+            android:layout_alignRight="@id/cardticket"
+            android:layout_alignLeft="@id/cardticket"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asal"/>
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="20dp"
+            android:id="@+id/loc"
+            android:src="@drawable/loc"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="340dp"
+            android:layout_alignTop="@id/cardticket"
+            android:layout_alignBottom="@id/cardticket"
+            android:layout_alignRight="@id/cardticket"
+            android:layout_alignLeft="@id/cardticket"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tanggal"
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
