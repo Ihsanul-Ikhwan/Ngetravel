@@ -2,56 +2,109 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
+    
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:background="@drawable/ticket">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="125dp"
-            android:id="@+id/cardticket"
-            android:src="@drawable/card"/>
-
-        <ImageView
-            android:layout_width="21dp"
-            android:layout_height="20dp"
             android:id="@+id/send"
-            android:src="@drawable/send"
-            android:textStyle="bold"
-            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="80dp"
-            android:layout_marginRight="350dp"
-            android:layout_alignTop="@id/cardticket"
-            android:layout_alignBottom="@id/cardticket"
-            android:layout_alignRight="@id/cardticket"
-            android:layout_alignLeft="@id/cardticket"/>
+            android:gravity="center"
+            android:src="@drawable/send" />
 
         <TextView
+            android:id="@+id/asal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Asal"/>
-
-        <ImageView
-            android:layout_width="21dp"
-            android:layout_height="20dp"
-            android:id="@+id/loc"
-            android:src="@drawable/loc"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="80dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="340dp"
-            android:layout_alignTop="@id/cardticket"
-            android:layout_alignBottom="@id/cardticket"
-            android:layout_alignRight="@id/cardticket"
-            android:layout_alignLeft="@id/cardticket"/>
+            android:text="Asal"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/send"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="tanggal"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:id="@+id/tanggalB"
+            android:layout_below="@id/asal"
+            android:layout_toRightOf="@id/send"/>
+
+        <ImageView
+            android:id="@+id/loc"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/send"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:src="@drawable/loc"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tujuan"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/tanggalB"
+            android:layout_toRightOf="@id/loc"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tujuan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tanggal"
+            android:textSize="10sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:id="@+id/tanggalS"
+            android:layout_below="@id/tujuan"
+            android:layout_toRightOf="@id/loc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JAM"
+            android:textColor="@color/black"
+            android:id="@+id/jam"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. ~"
+            android:textColor="@color/black"
+            android:id="@+id/harga"
+            android:layout_below="@id/jam"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/belibtn"
+            android:text="BELI TIKET"
+            android:layout_below="@id/harga"
+            android:id="@+id/btnBeli"/>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

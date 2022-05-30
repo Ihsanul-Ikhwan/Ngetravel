@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/drawable/belibtn.xml" value="0.1995" />
+        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.317" />
         <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/drawable/roundedbutton.xml" value="0.317" />
+        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/drawable/roundedbutton2.xml" value="0.317" />
         <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/layout/activity_first_page.xml" value="0.3151041666666667" />
         <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/layout/activity_fullscreen.xml" value="0.17760416666666667" />
+        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/layout/activity_login.xml" value="0.18085106382978725" />
+        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/layout/activity_splash_screen.xml" value="0.3151041666666667" />
-        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/layout/cardview.xml" value="0.3578125" />
+        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/layout/cardview.xml" value="0.4953664700926706" />
+        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.317" />
+        <entry key="..\:/Private/AndroidStudioProjects/Ngetravel/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.317" />
       </map>
     </option>
   </component>
