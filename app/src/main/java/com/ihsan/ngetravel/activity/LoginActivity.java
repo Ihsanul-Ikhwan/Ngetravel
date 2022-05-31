@@ -1,8 +1,10 @@
-package com.ihsan.ngetravel;
+package com.ihsan.ngetravel.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.ihsan.ngetravel.R;
 
 public class LoginActivity extends AppCompatActivity {
 
