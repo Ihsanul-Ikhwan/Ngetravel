@@ -1,6 +1,6 @@
 package com.ihsan.ngetravel.API;
 
-import com.ihsan.restihsanultrpl3b.model.UserModel;
+import com.ihsan.ngetravel.model.UserModel;
 
 import java.util.List;
 

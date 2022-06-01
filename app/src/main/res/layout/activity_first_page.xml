@@ -50,42 +50,36 @@
         android:text="LOGIN"/>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:background="@drawable/bottom" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/lupa"
-            android:text="Lupa Password?"
-            android:textStyle="italic"
-            android:textColor="@color/white"
+            android:layout_height="71dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:layout_marginBottom="20dp"
-            android:layout_alignTop="@id/imageView"
-            android:layout_alignBottom="@id/imageView"
-            android:layout_alignLeft="@id/imageView"
-            android:layout_alignRight="@id/imageView" />
+            android:background="@drawable/bottom">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/daftar"
-            android:layout_below="@id/lupa"
-            android:text="Atau klik disini jika belum memiliki akun"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="25dp"
-            android:layout_alignTop="@id/imageView"
-            android:layout_alignBottom="@id/imageView"
-            android:layout_alignRight="@id/imageView"
-            android:layout_alignLeft="@id/imageView"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lupa"
+                android:text="Lupa Password?"
+                android:textStyle="italic"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/daftar"
+                android:text="Atau klik disini jika belum memiliki akun"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+        </LinearLayout>
     </RelativeLayout>
 
 </LinearLayout>
