@@ -96,15 +96,17 @@
             android:layout_alignParentRight="true"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/btnBeli"
+            android:layout_width="80dp"
             android:layout_height="30dp"
+            android:layout_below="@id/harga"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:layout_alignParentRight="true"
             android:background="@drawable/belibtn"
             android:text="BELI TIKET"
-            android:layout_below="@id/harga"
-            android:id="@+id/btnBeli"/>
+            android:textSize="8sp"
+            android:textColor="@color/white"/>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
