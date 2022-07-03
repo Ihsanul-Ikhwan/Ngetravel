@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        username = findViewById(R.id.usernameinput);
+        username = findViewById(R.id.inputEmail);
         email = findViewById(R.id.emailinput);
         password = findViewById(R.id.passwordinput);
         login = findViewById(R.id.login);
@@ -43,14 +43,14 @@ public class RegisterActivity extends AppCompatActivity {
                             }
         });
 
-//        login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void insertDataUser(){
         retrofit = new Retrofit.Builder()

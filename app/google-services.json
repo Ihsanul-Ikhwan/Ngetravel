@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "415637721858",
+    "project_id": "ngetravel-e2d98",
+    "storage_bucket": "ngetravel-e2d98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415637721858:android:2001672d4da67eb25a681b",
+        "android_client_info": {
+          "package_name": "com.ihsan.ngetravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415637721858-0r7irb972kcc4vqmelkucldqlun186jv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDObybeL3vizw7o1emENP39VMcajs-YGKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415637721858-0r7irb972kcc4vqmelkucldqlun186jv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

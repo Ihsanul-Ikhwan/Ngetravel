@@ -40,7 +40,7 @@
             android:layout_width="260dp"
             android:layout_height="40dp"
             android:background="@drawable/frameinput"
-            android:id="@+id/usernameinput"
+            android:id="@+id/inputEmail"
             android:hint="Username"
             android:textSize="20sp"
             android:textAlignment="center"/>

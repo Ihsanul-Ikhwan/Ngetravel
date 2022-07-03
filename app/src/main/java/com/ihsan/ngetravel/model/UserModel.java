@@ -12,6 +12,9 @@ public class UserModel {
     @SerializedName("password")
     private String password;
 
+    @SerializedName("status")
+    private String status;
+
     public String getUsername() {
         return username;
     }
@@ -36,9 +39,18 @@ public class UserModel {
         this.password = password;
     }
 
-    public UserModel(String username, String email, String password) {
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public UserModel(String username, String email, String password, String status) {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.status = status;
     }
 }

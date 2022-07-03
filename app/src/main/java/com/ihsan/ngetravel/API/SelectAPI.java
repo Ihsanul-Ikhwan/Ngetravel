@@ -1,6 +1,6 @@
 package com.ihsan.ngetravel.API;
 
-import com.ihsan.ngetravel.model.UserModel;
+import com.ihsan.ngetravel.model.TiketModel;
 
 import java.util.List;
 
@@ -9,6 +9,6 @@ import retrofit2.http.GET;
 
 public interface SelectAPI {
 
-    @GET("selectuser.php")
-    Call<List<UserModel>> callUser();
+    @GET("showtiket.php")
+    Call<List<TiketModel>> callTiket();
 }

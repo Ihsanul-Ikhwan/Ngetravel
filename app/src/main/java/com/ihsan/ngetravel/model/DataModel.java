@@ -7,12 +7,6 @@ public class DataModel {
     private String message;
     List<UserModel> userModelList;
 
-    public DataModel(int code, String message, List<UserModel> userModelList) {
-        this.code = code;
-        this.message = message;
-        this.userModelList = userModelList;
-    }
-
     public int getCode() {
         return code;
     }
@@ -34,6 +28,12 @@ public class DataModel {
     }
 
     public void setUserModelList(List<UserModel> userModelList) {
+        this.userModelList = userModelList;
+    }
+
+    public DataModel(int code, String message, List<UserModel> userModelList) {
+        this.code = code;
+        this.message = message;
         this.userModelList = userModelList;
     }
 }
