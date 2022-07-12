@@ -12,6 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:id="@+id/back"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/trapel"
+            android:id="@+id/trapel"/>
+
         <TextView
             android:layout_width="175dp"
             android:layout_height="35dp"
@@ -19,6 +34,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:id="@+id/asal"
+            android:layout_below="@+id/trapel"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:text="Asal"/>
@@ -31,15 +47,190 @@
             android:gravity="center"
             android:textStyle="bold"
             android:id="@+id/tujuan"
+            android:layout_below="@+id/trapel"
             android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             android:text="Tujuan"/>
     </RelativeLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/framebg"
+        android:layout_marginTop="50dp">
 
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:src="@drawable/send" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/asal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/send"
+            android:text="Asal"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tanggal"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:id="@+id/berangkat"
+            android:layout_below="@id/asal2"
+            android:layout_toRightOf="@id/send"/>
+
+        <ImageView
+            android:id="@+id/loc"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/send"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:src="@drawable/loc"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tujuan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/berangkat"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/loc"
+            android:text="Tujuan"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tanggal"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:id="@+id/sampai"
+            android:layout_below="@id/tujuan2"
+            android:layout_toRightOf="@id/loc"/>
+
+        <TextView
+            android:id="@+id/jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="55dp"
+            android:text="JAM"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jam"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="55dp"
+            android:text="Rp. ~"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/sampai"
+            android:id="@+id/seats"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Mobil"
+                android:textColor="@color/black"
+                android:id="@+id/infomobil"
+                android:textSize="25dp"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="37dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/info"
+                tools:layout_editor_absoluteX="244dp"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:background="@drawable/seat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="64dp"
+                tools:layout_editor_absoluteY="124dp"/>
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:background="@drawable/seat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="64dp"
+                tools:layout_editor_absoluteY="187dp" />
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:background="@drawable/seat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="178dp"
+                tools:layout_editor_absoluteY="187dp" />
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:background="@drawable/seat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="291dp"
+                tools:layout_editor_absoluteY="187dp" />
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:background="@drawable/seat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="178dp"
+                tools:layout_editor_absoluteY="249dp" />
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:background="@drawable/seat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="64dp"
+                tools:layout_editor_absoluteY="249dp" />
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:background="@drawable/seat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="291dp"
+                tools:layout_editor_absoluteY="249dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/order"
+            android:src="@drawable/btnorder"/>
+    </RelativeLayout>
 </LinearLayout>

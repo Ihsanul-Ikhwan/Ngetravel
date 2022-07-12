@@ -59,4 +59,8 @@ class TiketViewHolder extends RecyclerView.ViewHolder{
         jam = itemView.findViewById(R.id.jam);
         harga = itemView.findViewById(R.id.harga);
     }
+
+    public interface OnTiketListener{
+        void onTiketClick(int position);
+    }
 }

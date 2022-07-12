@@ -49,18 +49,18 @@
         android:id="@+id/login"
         android:text="LOGIN"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:textAlignment="center"
-        android:text="---------  OR  ---------"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;  OR  -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"/>-->
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:src="@drawable/googles"
-        android:layout_gravity="center"/>
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:src="@drawable/googles"-->
+<!--        android:layout_gravity="center"/>-->
 
     <RelativeLayout
         android:layout_width="wrap_content"
