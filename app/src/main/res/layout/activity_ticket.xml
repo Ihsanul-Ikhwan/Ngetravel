@@ -131,7 +131,7 @@
             android:layout_marginRight="55dp"
             android:text="JAM"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/harga"
@@ -160,7 +160,8 @@
                 android:id="@+id/infomobil"
                 android:textSize="25dp"
                 tools:layout_editor_absoluteX="35dp"
-                tools:layout_editor_absoluteY="37dp" />
+                tools:layout_editor_absoluteY="37dp"
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:layout_width="wrap_content"

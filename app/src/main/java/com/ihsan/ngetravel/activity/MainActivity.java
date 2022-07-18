@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.ihsan.ngetravel.API.ServerAPI;
 import com.ihsan.ngetravel.R;
 import com.ihsan.ngetravel.adapter.TiketAdapter;
+import com.ihsan.ngetravel.interfaces.TiketInterface;
 import com.ihsan.ngetravel.model.TiketModel;
 
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TiketInterface {
     private RecyclerView recyclerView;
     private List<TiketModel> tiketModelList = new ArrayList<>();
     RecyclerView.LayoutManager lm;
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         llm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(llm);
         recyclerView.setHasFixedSize(true);
-        tiketAdapter = new TiketAdapter(this, tiketModelList);
+        tiketAdapter = new TiketAdapter(this, tiketModelList, this);
         recyclerView.setAdapter(tiketAdapter);
 
         showData();
@@ -56,5 +58,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(MainActivity.this, TicketActivity.class);
+
+        intent.putExtra("ASAL", tiketModelList.get(position).getAsal());
+        intent.putExtra("BERANGKAT", tiketModelList.get(position).getBerangkat());
+        intent.putExtra("TUJUAN", tiketModelList.get(position).getTujuan());
+        intent.putExtra("SAMPAI", tiketModelList.get(position).getSampai());
+        intent.putExtra("JAM", tiketModelList.get(position).getJam());
+        intent.putExtra("HARGA", tiketModelList.get(position).getHarga());
+
+        startActivity(intent);
     }
 }

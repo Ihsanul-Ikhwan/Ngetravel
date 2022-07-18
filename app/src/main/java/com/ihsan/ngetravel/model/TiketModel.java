@@ -3,6 +3,9 @@ package com.ihsan.ngetravel.model;
 import com.google.gson.annotations.SerializedName;
 
 public class TiketModel {
+    @SerializedName("idtiket")
+    private int idtiket;
+
     @SerializedName("asal")
     private String asal;
 
@@ -20,6 +23,14 @@ public class TiketModel {
 
     @SerializedName("harga")
     private String harga;
+
+    public int getIdtiket() {
+        return idtiket;
+    }
+
+    public void setIdtiket(int idtiket) {
+        this.idtiket = idtiket;
+    }
 
     public String getAsal() {
         return asal;
@@ -69,7 +80,8 @@ public class TiketModel {
         this.harga = harga;
     }
 
-    public TiketModel(String asal, String tujuan, String berangkat, String sampai, String jam, String harga) {
+    public TiketModel(int idtiket, String asal, String tujuan, String berangkat, String sampai, String jam, String harga) {
+        this.idtiket = idtiket;
         this.asal = asal;
         this.tujuan = tujuan;
         this.berangkat = berangkat;

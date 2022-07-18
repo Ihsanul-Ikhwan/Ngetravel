@@ -37,7 +37,10 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                CheckDataUser();
+//                CheckDataUser();
+                finish();
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
         daftar.setOnClickListener(new View.OnClickListener() {
@@ -57,20 +60,16 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<UserModel>() {
             @Override
             public void onResponse(Call<UserModel> call, Response<UserModel> response) {
-
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-
-
 //                if (email.getText().toString() == null || password.getText().toString() == null){
 //                    Toast.makeText(LoginActivity.this, "Email dan Password Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
 //                }else {
-//                    if (response.code()==200){
-//                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//                        startActivity(intent);
-//
-//                    }else{
-//                        Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
-//                    }
+                    if (response.isSuccessful() && response.body() != null){
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+
+                    }else{
+                        Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+                    }
 //                }
             }
 

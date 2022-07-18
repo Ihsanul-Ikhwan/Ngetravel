@@ -9,18 +9,22 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ihsan.ngetravel.R;
+import com.ihsan.ngetravel.interfaces.TiketInterface;
 import com.ihsan.ngetravel.model.TiketModel;
 
 import java.util.List;
 
 public class TiketAdapter extends RecyclerView.Adapter<TiketViewHolder> {
+    private final TiketInterface tiketInterface;
 
     Context context;
     private List<TiketModel> tiketModels;
 
-    public TiketAdapter(Context context, List<TiketModel> tiketModels) {
+
+    public TiketAdapter(Context context, List<TiketModel> tiketModels, TiketInterface tiketInterface) {
         this.context = context;
         this.tiketModels = tiketModels;
+        this.tiketInterface = tiketInterface;
     }
 
     @NonNull
@@ -28,7 +32,7 @@ public class TiketAdapter extends RecyclerView.Adapter<TiketViewHolder> {
     public TiketViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview, parent, false);
 
-        TiketViewHolder tvh = new TiketViewHolder(view);
+        TiketViewHolder tvh = new TiketViewHolder(view, tiketInterface);
         return tvh;
     }
 
@@ -50,7 +54,7 @@ public class TiketAdapter extends RecyclerView.Adapter<TiketViewHolder> {
 }
 class TiketViewHolder extends RecyclerView.ViewHolder{
     TextView asal, berangkat, tujuan, sampai, jam, harga;
-    public TiketViewHolder(@NonNull View itemView){
+    public TiketViewHolder(@NonNull View itemView, TiketInterface tiketInterface){
         super(itemView);
         asal = itemView.findViewById(R.id.asal);
         berangkat = itemView.findViewById(R.id.berangkat);
@@ -58,9 +62,18 @@ class TiketViewHolder extends RecyclerView.ViewHolder{
         sampai = itemView.findViewById(R.id.sampai);
         jam = itemView.findViewById(R.id.jam);
         harga = itemView.findViewById(R.id.harga);
-    }
 
-    public interface OnTiketListener{
-        void onTiketClick(int position);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (tiketInterface != null){
+                    int pos = getAdapterPosition();
+
+                    if (pos != RecyclerView.NO_POSITION){
+                        tiketInterface.onItemClick(pos);
+                    }
+                }
+            }
+        });
     }
 }
