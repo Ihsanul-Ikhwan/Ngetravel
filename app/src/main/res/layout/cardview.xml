@@ -13,6 +13,12 @@
             android:layout_height="125dp"
             android:background="@drawable/ticket">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idtiket"
+                android:visibility="invisible"/>
+
             <ImageView
                 android:id="@+id/send"
                 android:layout_width="wrap_content"
@@ -66,15 +72,15 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/sampai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="tanggal"
-                android:textSize="10sp"
-                android:layout_marginLeft="5dp"
-                android:textColor="@color/black"
-                android:id="@+id/sampai"
                 android:layout_below="@id/tujuan"
-                android:layout_toRightOf="@id/loc"/>
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/loc"
+                android:text="tanggal"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
 
             <TextView
                 android:layout_width="wrap_content"

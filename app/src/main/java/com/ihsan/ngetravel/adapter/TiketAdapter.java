@@ -39,6 +39,7 @@ public class TiketAdapter extends RecyclerView.Adapter<TiketViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull TiketViewHolder holder, int position) {
         TiketModel tiketModel = tiketModels.get(position);
+        holder.idtiket.setText(String.valueOf(tiketModel.getIdtiket()));
         holder.asal.setText(tiketModel.getAsal());
         holder.berangkat.setText(tiketModel.getBerangkat());
         holder.tujuan.setText(tiketModel.getTujuan());
@@ -53,9 +54,10 @@ public class TiketAdapter extends RecyclerView.Adapter<TiketViewHolder> {
     }
 }
 class TiketViewHolder extends RecyclerView.ViewHolder{
-    TextView asal, berangkat, tujuan, sampai, jam, harga;
+    TextView idtiket, asal, berangkat, tujuan, sampai, jam, harga;
     public TiketViewHolder(@NonNull View itemView, TiketInterface tiketInterface){
         super(itemView);
+        idtiket = itemView.findViewById(R.id.idtiket);
         asal = itemView.findViewById(R.id.asal);
         berangkat = itemView.findViewById(R.id.berangkat);
         tujuan = itemView.findViewById(R.id.tujuan);

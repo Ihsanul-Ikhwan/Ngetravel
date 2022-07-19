@@ -37,16 +37,12 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-//                CheckDataUser();
-                finish();
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                CheckDataUser();
             }
         });
         daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
@@ -60,18 +56,20 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<UserModel>() {
             @Override
             public void onResponse(Call<UserModel> call, Response<UserModel> response) {
-//                if (email.getText().toString() == null || password.getText().toString() == null){
-//                    Toast.makeText(LoginActivity.this, "Email dan Password Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
-//                }else {
-                    if (response.isSuccessful() && response.body() != null){
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
+                if (email.getText().toString() == null || password.getText().toString() == null){
+                        Toast.makeText(LoginActivity.this, "Email dan Password Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
+                    }else {
+                        if (response.isSuccessful() && response.body() != null){
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            intent.putExtra("MAIL", email.getText().toString());
+                            startActivity(intent);
 
-                    }else{
-                        Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+                        }
                     }
-//                }
-            }
+                }
+
 
             @Override
             public void onFailure(Call<UserModel> call, Throwable t) {

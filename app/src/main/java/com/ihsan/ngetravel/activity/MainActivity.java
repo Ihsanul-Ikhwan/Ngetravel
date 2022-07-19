@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.ihsan.ngetravel.API.ServerAPI;
 import com.ihsan.ngetravel.R;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements TiketInterface {
     private List<TiketModel> tiketModelList = new ArrayList<>();
     RecyclerView.LayoutManager lm;
     private LinearLayoutManager llm;
+    TextView email;
 
     TiketAdapter tiketAdapter;
 
@@ -39,6 +41,10 @@ public class MainActivity extends AppCompatActivity implements TiketInterface {
         recyclerView.setHasFixedSize(true);
         tiketAdapter = new TiketAdapter(this, tiketModelList, this);
         recyclerView.setAdapter(tiketAdapter);
+
+        email = findViewById(R.id.mail);
+        String mail = getIntent().getStringExtra("MAIL");
+        email.setText("Welcome, "+mail);
 
         showData();
     }
@@ -64,12 +70,14 @@ public class MainActivity extends AppCompatActivity implements TiketInterface {
     public void onItemClick(int position) {
         Intent intent = new Intent(MainActivity.this, TicketActivity.class);
 
+        intent.putExtra("IDTIKET", tiketModelList.get(position).getIdtiket());
         intent.putExtra("ASAL", tiketModelList.get(position).getAsal());
         intent.putExtra("BERANGKAT", tiketModelList.get(position).getBerangkat());
         intent.putExtra("TUJUAN", tiketModelList.get(position).getTujuan());
         intent.putExtra("SAMPAI", tiketModelList.get(position).getSampai());
         intent.putExtra("JAM", tiketModelList.get(position).getJam());
         intent.putExtra("HARGA", tiketModelList.get(position).getHarga());
+        intent.putExtra("MAIL", email.getText().toString());
 
         startActivity(intent);
     }

@@ -27,6 +27,28 @@
             android:src="@drawable/trapel"
             android:id="@+id/trapel"/>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="invisible"
+            android:id="@+id/profil"
+            android:src="@drawable/akun"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/profil"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:text="Welcome, "
+            android:visibility="invisible"
+            android:id="@+id/mail"/>
+
         <TextView
             android:layout_width="175dp"
             android:layout_height="35dp"
@@ -58,6 +80,12 @@
         android:layout_height="match_parent"
         android:background="@drawable/framebg"
         android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idtiket"
+            android:visibility="invisible"/>
 
         <ImageView
             android:id="@+id/send"
@@ -145,7 +173,7 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_below="@id/sampai"
@@ -155,83 +183,103 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jenis Mobil"
+                android:text="Jenis Mobil : Avanza"
+                android:layout_centerHorizontal="true"
                 android:textColor="@color/black"
                 android:id="@+id/infomobil"
-                android:textSize="25dp"
-                tools:layout_editor_absoluteX="35dp"
-                tools:layout_editor_absoluteY="37dp"
-                tools:ignore="MissingConstraints" />
+                android:layout_marginLeft="30dp"
+                android:textSize="20dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mobil"
+                android:layout_below="@id/infomobil"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/info"
-                tools:layout_editor_absoluteX="244dp"
-                tools:ignore="MissingConstraints" />
+                android:layout_below="@id/infomobil"
+                android:id="@+id/kursi"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:visibility="invisible"/>
 
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="35dp"
-                android:background="@drawable/seat"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="64dp"
-                tools:layout_editor_absoluteY="124dp"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kursi"
+                android:layout_centerInParent="true"
+                android:visibility="invisible">
 
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="35dp"
-                android:background="@drawable/seat"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="64dp"
-                tools:layout_editor_absoluteY="187dp" />
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/kursi1"
+                    android:background="@drawable/seat"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical" />
 
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="35dp"
-                android:background="@drawable/seat"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="178dp"
-                tools:layout_editor_absoluteY="187dp" />
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/kursi2"
+                    android:background="@drawable/seat"
+                    android:layout_below="@id/kursi1"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical" />
 
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="35dp"
-                android:background="@drawable/seat"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="291dp"
-                tools:layout_editor_absoluteY="187dp" />
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/kursi3"
+                    android:background="@drawable/seat"
+                    android:layout_below="@id/kursi1"
+                    android:layout_toRightOf="@id/kursi2"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical" />
 
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="35dp"
-                android:background="@drawable/seat"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="178dp"
-                tools:layout_editor_absoluteY="249dp" />
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/kursi4"
+                    android:background="@drawable/seat"
+                    android:layout_below="@id/kursi1"
+                    android:layout_toRightOf="@id/kursi3"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical" />
 
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="35dp"
-                android:background="@drawable/seat"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="64dp"
-                tools:layout_editor_absoluteY="249dp" />
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="50dp"
+                    android:id="@+id/kursi5"
+                    android:background="@drawable/seat"
+                    android:layout_below="@id/kursi4"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal" />
 
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="35dp"
-                android:background="@drawable/seat"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="291dp"
-                tools:layout_editor_absoluteY="249dp" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/kursi6"
+                    android:background="@drawable/seat"
+                    android:layout_below="@id/kursi4"
+                    android:layout_toRightOf="@id/kursi5"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+        </RelativeLayout>
 
         <ImageView
+            android:id="@+id/order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:id="@+id/order"
-            android:src="@drawable/btnorder"/>
+            android:src="@drawable/btnorder" />
     </RelativeLayout>
 </LinearLayout>
