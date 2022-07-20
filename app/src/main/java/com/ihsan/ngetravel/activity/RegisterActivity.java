@@ -67,10 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
                 email.setText("");
                 password.setText("");
 
-//                Toast.makeText(getApplicationContext(), response.toString()
-//                        , Toast.LENGTH_LONG).show();
-
-                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
 

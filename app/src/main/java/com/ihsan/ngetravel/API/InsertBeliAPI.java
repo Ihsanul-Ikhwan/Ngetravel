@@ -13,7 +13,7 @@ public interface InsertBeliAPI {
     @POST("insertbeli.php")
 
     Call<BeliModel> inputBeli(
-            @Field("idtiket") String tiket,
+            @Field("idtiket") String idtiket,
             @Field("email") String email,
             @Field("harga") String harga
     );

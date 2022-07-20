@@ -21,9 +21,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class TicketActivity extends AppCompatActivity {
     TextView txtidtiket, txtasal, txttujuan, txtasal2, txtberangkat, txttujuan2, txtsampai, txtjam, txtharga, email;
+    String idtiket, asal, tujuan, berangkat, sampai, jam, harga, mail;
+
     ImageView back, order;
+    private String baseURL ="https://ihsanulikhwan.000webhostapp.com/ngetravel/";
     private static Retrofit retrofit = null;
-    private String baseUrl ="https://ihsanulikhwan.000webhostapp.com/ngetravel/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +46,14 @@ public class TicketActivity extends AppCompatActivity {
         order = findViewById(R.id.order);
         email = findViewById(R.id.mail);
 
-        String idtiket = getIntent().getStringExtra("IDTIKET");
-        String asal = getIntent().getStringExtra("ASAL");
-        String tujuan = getIntent().getStringExtra("TUJUAN");
-        String berangkat = getIntent().getStringExtra("BERANGKAT");
-        String sampai = getIntent().getStringExtra("SAMPAI");
-        String jam = getIntent().getStringExtra("JAM");
-        String harga = getIntent().getStringExtra("HARGA");
-        String mail = getIntent().getStringExtra("MAIL");
+        idtiket = getIntent().getStringExtra("IDTIKET");
+        asal = getIntent().getStringExtra("ASAL");
+        tujuan = getIntent().getStringExtra("TUJUAN");
+        berangkat = getIntent().getStringExtra("BERANGKAT");
+        sampai = getIntent().getStringExtra("SAMPAI");
+        jam = getIntent().getStringExtra("JAM");
+        harga = getIntent().getStringExtra("HARGA");
+        mail = getIntent().getStringExtra("MAIL");
 
         txtidtiket.setText(idtiket);
         txtasal.setText(asal);
@@ -80,13 +82,18 @@ public class TicketActivity extends AppCompatActivity {
     }
 
     private void insertBeli(){
-        retrofit = new Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).build();
+        retrofit = new Retrofit.Builder().
+                baseUrl(baseURL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
         InsertBeliAPI insertBeliAPI = retrofit.create(InsertBeliAPI.class);
         Call<BeliModel> call = insertBeliAPI.inputBeli(txtidtiket.getText().toString(), email.getText().toString(), txtharga.getText().toString());
         call.enqueue(new Callback<BeliModel>() {
             @Override
             public void onResponse(Call<BeliModel> call, Response<BeliModel> response) {
+
+//                Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(TicketActivity.this, SuccessActivity.class);
                 startActivity(intent);
             }

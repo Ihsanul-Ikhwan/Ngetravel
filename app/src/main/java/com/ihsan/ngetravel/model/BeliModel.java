@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class BeliModel {
     @SerializedName("idtiket")
-    private int idtiket;
+    private String idtiket;
 
     @SerializedName("email")
     private String email;
@@ -12,11 +12,11 @@ public class BeliModel {
     @SerializedName("harga")
     private String password;
 
-    public int getIdtiket() {
+    public String getIdtiket() {
         return idtiket;
     }
 
-    public void setIdtiket(int idtiket) {
+    public void setIdtiket(String idtiket) {
         this.idtiket = idtiket;
     }
 
@@ -36,7 +36,7 @@ public class BeliModel {
         this.password = password;
     }
 
-    public BeliModel(int idtiket, String email, String password) {
+    public BeliModel(String idtiket, String email, String password) {
         this.idtiket = idtiket;
         this.email = email;
         this.password = password;
